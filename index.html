@@ -1124,9 +1124,11 @@ As a web designer or developer you will work on a range of projects, be creative
         $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbygCprB2ISUGifEgFOoNMqIseQ2K6QSzbRvrNMm/exec",
+                url:"https://script.google.com/macros/s/AKfycbxT3DgiPudPmPrOu_NwIgtqsCApOhIu8JVpuT52_2JZlXAOH8JlcmYGf1LnUzPmyz81/exec",
                 data:$("#submit-form").serialize(),
                 method:"post",
+                crossDomain: true,
+                
                 success:function (response){
                     alert("Form submitted successfully")
                     window.location.reload()
